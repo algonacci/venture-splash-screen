@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:venture/pages/home.dart';
 import 'package:venture/pages/splash.dart';
 
 void main() {
@@ -10,8 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: SplashScreen(),
+    return MaterialApp(
+      home: const SplashScreen(),
+      routes: {
+        '/home': (context) => const HomePage(),
+      },
     );
   }
 }
